@@ -1,0 +1,10 @@
+[Unit]
+Description=cpu-watch
+
+[Service]
+ExecStart=/usr/local/bin/cpu-watch.py  --forever
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
